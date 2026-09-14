@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services - CYOS</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="assets/images/logo.png" alt="Logo CYOS" class="logo"> 
+    </div>
+
+    <nav class="navbar">
+        <button class="burger-menu" aria-label="Ouvrir le menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos de CYOS</a></li>
+            <!-- La classe active est positionnée sur le bouton Nos Services -->
+            <li class="dropdown mobile-click">
+                <a href="services.html" class="dropdown-toggle active">Nos Services <span class="arrow"></span></a>
+                <ul class="submenu">
+                    <li><a href="mariage.html">Mariage</a></li>
+                    <li><a href="anniversaire.html">Anniversaire</a></li>
+                    <li><a href="bapteme.html">Baptême</a></li>
+                    <li><a href="babyshower.html">Baby Shower</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- L'introduction reste bien centrée -->
+    <section class="services-intro">
+        <h1>Nos Services</h1>
+        <p>Découvrez nos prestations sur-mesure pour donner vie à vos projets les plus précieux.</p>
+    </section>
+
+    <!-- La grille qui va contenir et organiser vos cartes -->
+    <section class="services-grid-container">
+        <div class="services-grid">
+            
+            <!-- Carte Mariage -->
+            <div class="service-card">
+                <div class="card-image">
+                    <img src="assets/images/mariage.jpg" alt="Organisation de Mariage">
+                </div>
+                <div class="card-content">
+                    <h2>Mariage</h2>
+                    <p>De la recherche du lieu idéal à la coordination du jour J, nous créons le mariage de vos rêves sur-mesure.</p>
+                    <a href="mariage.html" class="btn-card">Découvrir</a>
+                </div>
+            </div>
+
+            <!-- Carte Anniversaire -->
+            <div class="service-card">
+                <div class="card-image">
+                    <img src="assets/images/anniversaire.jpg" alt="Organisation d'Anniversaire">
+                </div>
+                <div class="card-content">
+                    <h2>Anniversaire</h2>
+                    <p>Une fête mémorable pour petits et grands. Thématiques originales, animations et décors spectaculaires.</p>
+                    <a href="anniversaire.html" class="btn-card">Découvrir</a>
+                </div>
+            </div>
+
+            <!-- Carte Baptême -->
+            <div class="service-card">
+                <div class="card-image">
+                    <img src="assets/images/bapteme.jpg" alt="Organisation de Baptême">
+                </div>
+                <div class="card-content">
+                    <h2>Baptême</h2>
+                    <p>Célébrez ce moment unique en famille dans une ambiance douce, raffinée et parfaitement orchestrée.</p>
+                    <a href="bapteme.html" class="btn-card">Découvrir</a>
+                </div>
+            </div>
+
+            <!-- Carte Baby Shower -->
+            <div class="service-card">
+                <div class="card-image">
+                    <img src="assets/images/babyshower.jpg" alt="Organisation de Baby Shower">
+                </div>
+                <div class="card-content">
+                    <h2>Baby Shower</h2>
+                    <p>Accueillez l'arrivée de votre futur bébé avec une fête chaleureuse, des jeux ludiques et une décoration pastel.</p>
+                    <a href="babyshower.html" class="btn-card">Découvrir</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <!-- Ajout de l'élément d'Avis Google -->
+        <div class="footer-google-reviews">
+            <div class="google-logo">
+                <span style="color: #4285F4">G</span><span style="color: #EA4335">o</span><span style="color: #FBBC05">o</span><span style="color: #4285F4">g</span><span style="color: #34A853">l</span><span style="color: #EA4335">e</span>
+                <span class="review-title">Avis Clients</span>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p class="rating-text">Note globale : <strong>4.9/5</strong> sur la base de nos événements</p>
+            <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="btn-google">Laisser un avis</a>
+        </div>
+
+        <div class="footer-separator"></div>
+
+        <p>&copy; 2026 CYOS - Organisation d'événements privés. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions Légales</a> | 
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
