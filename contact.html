@@ -1,114 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - CYOS</title>
+    <title>Contact | CYOS Heritage</title>
+    <!-- Liens vers les polices élégantes -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-<header>
-    <div class="logo-container">
-        <img src="assets/images/logo.png" alt="Logo CYOS" class="logo"> 
-    </div>
+    <!-- Menu de Navigation (Identique sur toutes les pages) -->
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="CYOS Heritage">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="produit.html">Le Coffret</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
 
-    <nav class="navbar">
-        <button class="burger-menu" aria-label="Ouvrir le menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="about.html">À propos de CYOS</a></li>
-            <li class="dropdown mobile-click">
-                <a href="services.html" class="dropdown-toggle">Nos Services <span class="arrow"></span></a>
-                <ul class="submenu">
-                    <li><a href="mariage.html">Mariage</a></li>
-                    <li><a href="anniversaire.html">Anniversaire</a></li>
-                    <li><a href="bapteme.html">Baptême</a></li>
-                    <li><a href="babyshower.html">Baby Shower</a></li>
-                </ul>
-            </li>
-            <!-- Changement ici : La classe active est positionnée sur le bouton Contact -->
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-    <div class="contact-container">
-        <h1>Contactez-nous</h1>
-        <p class="contact-subtitle">Une idée, un projet ? Discutons ensemble de votre futur événement.</p>
-
-        <!-- Formulaire de contact -->
-        <form action="#" method="POST" class="contact-form">
+    <!-- Section Principale de Contact -->
+    <section class="contact-section-layout">
+        <div class="contact-container">
             
-            <!-- Ligne Nom & Prénom -->
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="lastname">Nom</label>
-                    <input type="text" id="lastname" name="lastname" placeholder="Votre nom" required>
-                </div>
+            <!-- Colonne Gauche : Textes et Informations -->
+            <div class="contact-info">
+                <h1>Nous contacter</h1>
+                <p class="subtitle">À votre écoute, en toute confidentialité.</p>
+                <p class="contact-intro">
+                    Qu'il s'agisse d'une question sur nos coffrets, d'une demande de personnalisation sur-mesure ou pour planifier un échange discret, nous vous répondons avec soin et bienveillance.
+                </p>
                 
-                <div class="form-group">
-                    <label for="firstname">Prénom</label>
-                    <input type="text" id="firstname" name="firstname" placeholder="Votre prénom" required>
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <span>E-mail</span>
+                        <p><a href="mailto:info@cyos-heritage.be">info@cyos-heritage.be</a></p>
+                    </div>
+                    <div class="detail-item">
+                        <span>Région</span>
+                        <p>Belgique</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Ligne Email & Téléphone -->
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="email">Adresse Email</label>
-                    <input type="email" id="email" name="email" placeholder="exemple@domaine.com" required>
-                </div>
+            <!-- Colonne Droite : Formulaire Épuré -->
+            <div class="contact-form-container">
+                <form action="#" method="POST" class="heritage-form">
+                    <div class="form-group">
+                        <label for="name">Votre nom complet</label>
+                        <input type="text" id="name" name="name" required placeholder="Ex: Jean Dupont">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Votre adresse e-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="Ex: jean.dupont@email.com">
+                    </div>
 
-                <div class="form-group">
-                    <label for="phone">Numéro de téléphone</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+32 000 00 00 00" required>
-                </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet de votre demande</label>
+                        <input type="text" id="subject" name="subject" placeholder="Ex: Informations coffret, personnalisation...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Votre message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Comment pouvons-nous vous accompagner ?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Envoyer le message</button>
+                </form>
             </div>
 
-            <!-- Champ Message -->
-            <div class="form-group">
-                <label for="message">Votre message</label>
-                <textarea id="message" name="message" rows="6" placeholder="Décrivez votre projet d'événement en quelques lignes..." required></textarea>
-            </div>
-
-            <!-- Bouton d'envoi -->
-            <button type="submit" class="btn-submit">Envoyer la demande</button>
-        </form>
-    </div>
-</main>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-google-reviews">
-            <div class="google-logo">
-                <span style="color: #4285F4">G</span><span style="color: #EA4335">o</span><span style="color: #FBBC05">o</span><span style="color: #4285F4">g</span><span style="color: #34A853">l</span><span style="color: #EA4335">e</span>
-                <span class="review-title">Avis Clients</span>
-            </div>
-            <div class="stars">★★★★★</div>
-            <p class="rating-text">Note globale : <strong>4.9/5</strong> sur la base de nos événements</p>
-            <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="btn-google">Laisser un avis</a>
         </div>
+    </section>
 
-        <div class="footer-separator"></div>
-
-        <p>&copy; 2026 CYOS - Organisation d'événements privés. Tous droits réservés.</p>
-        <div class="footer-links">
-            <a href="mentions-legales.html">Mentions Légales</a> | 
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-</footer>
-
-<script src="assets/js/script.js"></script>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 CYOS Heritage. Tous droits réservés.</p>
+    </footer>
 
 </body>
 </html>
