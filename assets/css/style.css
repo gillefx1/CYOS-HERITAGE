@@ -341,4 +341,157 @@ a {
         font-size: 2.3rem;
     }
 }
+/* ==========================================================================
+   8. PAGE PRODUIT (COMPLÉMENT CSS)
+   ========================================================================== */
+.product-intro-section {
+    padding: 80px 8% 40px 8%;
+    text-align: center;
+    background-color: #121212;
+}
+
+.product-intro-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.product-intro-content .subtitle {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8e8e88;
+}
+
+/* Grille alternée */
+.product-details-layout {
+    background-color: #121212;
+    padding-bottom: 90px;
+}
+
+.product-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+    padding: 80px 8%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Alterne l'ordre image/texte une ligne sur deux */
+.product-row.reverse {
+    direction: rtl;
+}
+.product-row.reverse .product-text {
+    direction: ltr; /* Remet le texte dans le bon sens de lecture */
+}
+
+.row-num {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #666661;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.product-text h2 {
+    font-size: 2.3rem;
+    margin-bottom: 25px;
+}
+
+.product-text p {
+    color: #c4c4be;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.specs-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.specs-list li {
+    font-size: 0.9rem;
+    color: #a0a09a;
+    position: relative;
+    padding-left: 25px;
+    font-weight: 300;
+}
+
+/* Petite ligne horizontale devant les puces */
+.specs-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.product-image-container img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Bloc d'appel à l'action final */
+.product-cta-block {
+    text-align: center;
+    max-width: 700px;
+    margin: 80px auto 0 auto;
+    padding: 60px 40px;
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.product-cta-block h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.product-cta-block p {
+    color: #a0a09a;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.price-tag {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Adaptation Responsive */
+@media (max-width: 900px) {
+    .product-row, .product-row.reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 20px;
+        direction: ltr;
+    }
+    
+    .product-intro-content h1 {
+        font-size: 2.3rem;
+    }
+    
+    .product-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .product-image-container img {
+        height: 300px;
+    }
+    
+    .product-cta-block {
+        margin: 40px 20px 0 20px;
+        padding: 40px 20px;
+    }
+}
 
