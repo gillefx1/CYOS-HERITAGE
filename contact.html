@@ -49,9 +49,16 @@
                 </div>
             </div>
 
-            <!-- Colonne Droite : Formulaire Épuré -->
+            <!-- Colonne Droite : Formulaire Épuré connecté à Web3Forms -->
             <div class="contact-form-container">
-                <form action="#" method="POST" class="heritage-form">
+                <form action="https://web3forms.com" method="POST" class="heritage-form">
+                    
+                    <!-- Ta clé d'accès personnelle invisible -->
+                    <input type="hidden" name="access_key" value="77ef1304-90e8-4daf-a915-2f1dd6f9de51">
+                    
+                    <!-- Objet de l'e-mail reçu dans ta boîte personnelle -->
+                    <input type="hidden" name="subject" value="Nouveau message depuis le site CYOS Heritage">
+
                     <div class="form-group">
                         <label for="name">Votre nom complet</label>
                         <input type="text" id="name" name="name" required placeholder="Ex: Jean Dupont">
@@ -63,14 +70,17 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="subject">Sujet de votre demande</label>
-                        <input type="text" id="subject" name="subject" placeholder="Ex: Informations coffret, personnalisation...">
+                        <label for="customer_subject">Sujet de votre demande</label>
+                        <input type="text" id="customer_subject" name="customer_subject" placeholder="Ex: Informations coffret, personnalisation...">
                     </div>
                     
                     <div class="form-group">
                         <label for="message">Votre message</label>
                         <textarea id="message" name="message" rows="6" required placeholder="Comment pouvons-nous vous accompagner ?"></textarea>
                     </div>
+                    
+                    <!-- Protection anti-robot invisible -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     
                     <button type="submit" class="btn">Envoyer le message</button>
                 </form>
