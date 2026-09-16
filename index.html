@@ -4,10 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CYOS Heritage | Continue Your Own Story</title>
-    <!-- Liens vers les polices élégantes -->
+    <!-- Liens vers les polices élégantes corrigés pour l'affichage de l'écosystème -->
     <link href="https://googleapis.com" rel="stylesheet">
     <!-- Chemin modifié pour cibler le dossier assets/css/ -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* ==========================================================================
+           1. ALIGNEMENT, SYMÉTRIE ET STYLES DES BOUTONS HERO (LOOK HERITAGE)
+           ========================================================================== */
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        /* Structure unifiée pour forcer le même gabarit que sur CYOS Event */
+        .hero-buttons .btn {
+            font-family: 'Montserrat', sans-serif;
+            display: inline-block;
+            width: 260px; /* Même largeur pour les deux blocs */
+            padding: 14px 0; /* Même hauteur interne */
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        /* Bouton Plein Lumineux (Découvrir le coffret) */
+        .hero-buttons .btn-primary {
+            background-color: #ffffff;
+            color: #121212;
+            border: 1px solid #ffffff;
+        }
+        .hero-buttons .btn-primary:hover {
+            background-color: transparent;
+            color: #ffffff;
+        }
+        /* Bouton Épuré Contour (Discuter de mon projet) */
+        .hero-buttons .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+        }
+        .hero-buttons .btn-secondary:hover {
+            background-color: #ffffff;
+            color: #121212;
+        }
+
+        /* ==========================================================================
+           2. HARMONISATION DU FOOTER EN COMPACT (LOOK CLAIR NETTOYÉ)
+           ========================================================================== */
+        .main-footer {
+            padding: 40px 20px !important; /* Force la hauteur réduite compacte */
+            background-color: #121212;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+        .main-footer p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            color: #666661;
+            letter-spacing: 1px;
+            margin-bottom: 15px; /* Ajuste la séparation sous les droits d'auteur */
+        }
+        .footer-links {
+            margin-top: 0 !important; /* Nettoie la marge par défaut insérée en ligne */
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* ==========================================================================
+           3. CONFIGURATION RESPONSIVE IPHONE & SMARTPHONE
+           ========================================================================== */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero .subtitle { font-size: 1rem; margin-bottom: 25px; }
+            .hero .intro-text { font-size: 0.95rem; margin-bottom: 35px; }
+            
+            /* Alignement en colonne parfaite et centré verticalement sur l'iPhone */
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+            /* Adaptation de la liste du bas sur écran tactile */
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+            .footer-links span {
+                display: none; /* Efface les lignes séparatrices verticales superflues */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -33,8 +134,11 @@
             <p class="intro-text">
                 Parce que notre histoire ne s'arrête pas là, CYOS Heritage vous accompagne dans la préservation et la transmission de vos dernières volontés, de vos valeurs et de vos mots d'amour à ceux qui restent.
             </p>
-            <a href="produit.html" class="btn btn-primary">Découvrir le coffret</a>
-            <a href="contact.html" class="btn btn-secondary">Discuter de mon projet</a>
+            <!-- Boutons restructurés dans le conteneur flexbox -->
+            <div class="hero-buttons">
+                <a href="produit.html" class="btn btn-primary">Découvrir le coffret</a>
+                <a href="contact.html" class="btn btn-secondary">Discuter de mon projet</a>
+            </div>
         </div>
     </section>
 
@@ -52,17 +156,17 @@
             </div>
             <div class="pillar">
                 <h3>03. Le Coffret</h3>
-                <p>Un objet physique haut de gamme et personnalisable, conçu pour abriter vos écrits en toute confidentialité au cœur de votre foyer.</p>
+                <p>Un objet physique haut de gamme et personnalisable, conçu pour abriter vos écrits en toute confidentiality au cœur de votre foyer.</p>
             </div>
         </div>
     </section>
     
-    <!-- Footer CYOS Heritage Adapté (Liens sous les droits d'auteur) -->
+    <!-- Footer CYOS Heritage Adapté (Style compact harmonisé) -->
     <footer class="main-footer">
         <p>&copy; 2026 CYOS Heritage. Tous droits réservés.</p>
         
-        <!-- Liens réglementaires intégrés en dessous -->
-        <div class="footer-links" style="margin-top: 15px; display: flex; justify-content: center; gap: 20px; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">
+        <!-- Liens réglementaires intégrés proprement en dessous -->
+        <div class="footer-links">
             <a href="mentions-legales.html" style="color: #a0a09a; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#a0a09a'">Mentions Légales</a>
             <span style="color: rgba(255, 255, 255, 0.15);">|</span>
             <a href="cgv.html" style="color: #a0a09a; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#a0a09a'">CGV</a>
@@ -72,7 +176,6 @@
             <a href="contact.html" style="color: #a0a09a; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#a0a09a'">Contact</a>
         </div>
     </footer>
-
 
 </body>
 </html>
