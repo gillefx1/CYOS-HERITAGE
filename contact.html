@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | CYOS Heritage</title>
-    <!-- Liens vers les polices élégantes -->
+    <!-- Liens vers les polices élégantes corrigés -->
     <link href="https://googleapis.com" rel="stylesheet">
     <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -51,13 +51,16 @@
 
             <!-- Colonne Droite : Formulaire Épuré connecté à Web3Forms -->
             <div class="contact-form-container">
-                <form action="https://web3forms.com" method="POST" class="heritage-form">
+                <form action="https://api.web3forms.com/submit" method="POST" class="heritage-form">
                     
-                    <!-- Ta clé d'accès personnelle invisible -->
-                    <input type="hidden" name="access_key" value="77ef1304-90e8-4daf-a915-2f1dd6f9de51">
+                    <!-- Ta clé d'accès personnelle active -->
+                    <input type="hidden" name="access_key" value="5db6d4ba-5874-4d3f-9db9-0437d69ba1dd">
                     
                     <!-- Objet de l'e-mail reçu dans ta boîte personnelle -->
                     <input type="hidden" name="subject" value="Nouveau message depuis le site CYOS Heritage">
+
+                    <!-- Redirection automatique après envoi vers une page de remerciement (Optionnel) -->
+                    <!-- <input type="hidden" name="redirect" value="https://cyos-heritage.be"> -->
 
                     <div class="form-group">
                         <label for="name">Votre nom complet</label>
@@ -89,11 +92,10 @@
         </div>
     </section>
 
-    <!-- Footer CYOS Heritage Adapté (Liens sous les droits d'auteur) -->
+    <!-- Footer CYOS Heritage Adapté -->
     <footer class="main-footer">
         <p>&copy; 2026 CYOS Heritage. Tous droits réservés.</p>
         
-        <!-- Liens réglementaires intégrés en dessous -->
         <div class="footer-links" style="margin-top: 15px; display: flex; justify-content: center; gap: 20px; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">
             <a href="mentions-legales.html" style="color: #a0a09a; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#a0a09a'">Mentions Légales</a>
             <span style="color: rgba(255, 255, 255, 0.15);">|</span>
