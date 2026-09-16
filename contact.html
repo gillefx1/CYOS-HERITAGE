@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | CYOS Heritage</title>
-    <!-- Liens vers les polices élégantes corrigés -->
+    <!-- Liens vers les polices élégantes -->
     <link href="https://googleapis.com" rel="stylesheet">
     <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Ajustements spécifiques pour intégrer les lignes doubles du formulaire Event dans le thème sombre */
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .form-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -44,39 +62,51 @@
                     </div>
                     <div class="detail-item">
                         <span>Région</span>
-                        <p>Belgique & Luxembourg</p>
+                        <p>Belgique</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Colonne Droite : Formulaire Épuré connecté à Web3Forms -->
+            <!-- Colonne Droite : Formulaire harmonisé avec CYOS Event -->
             <div class="contact-form-container">
-                <form action="https://api.web3forms.com/submit" method="POST" class="heritage-form">
+                <form action="https://web3forms.com" method="POST" class="heritage-form">
                     
-                    <!-- Ta clé d'accès personnelle active -->
-                    <input type="hidden" name="access_key" value="77ef1304-90e8-4daf-a915-2f1dd6f9de51">
+                    <!-- Ta clé d'accès personnelle active pour CYOS Heritage -->
+                    <input type="hidden" name="access_key" value="5db6d4ba-5874-4d3f-9db9-0437d69ba1dd">
                     
                     <!-- Objet de l'e-mail reçu dans ta boîte personnelle -->
                     <input type="hidden" name="subject" value="Nouveau message depuis le site CYOS Heritage">
 
-                    <!-- Redirection automatique après envoi vers une page de remerciement (Optionnel) -->
-                    <input type="hidden" name="redirect" value="https://cyos-heritage.be/merci.html">
+                    <!-- Redirection automatique après envoi vers la page de remerciement Heritage -->
+                    <input type="hidden" name="redirect" value="https://cyos-heritage.be">
+
+                    <!-- Ligne Nom & Prénom (Identique à Event) -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="lastname">Nom</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Votre nom" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="firstname">Prénom</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="Votre prénom" required>
+                        </div>
+                    </div>
+
+                    <!-- Ligne Email & Téléphone (Identique à Event) -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Adresse Email</label>
+                            <input type="email" id="email" name="email" placeholder="exemple@domaine.com" required>
+                        </div>
 
                     <div class="form-group">
-                        <label for="name">Votre nom complet</label>
-                        <input type="text" id="name" name="name" required placeholder="Ex: Jean Dupont">
+                            <label for="phone">Numéro de téléphone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+32 000 00 00 00" required>
+                        </div>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="email">Votre adresse e-mail</label>
-                        <input type="email" id="email" name="email" required placeholder="Ex: jean.dupont@email.com">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="customer_subject">Sujet de votre demande</label>
-                        <input type="text" id="customer_subject" name="customer_subject" placeholder="Ex: Informations coffret, personnalisation...">
-                    </div>
-                    
+                    <!-- Champ Message -->
                     <div class="form-group">
                         <label for="message">Votre message</label>
                         <textarea id="message" name="message" rows="6" required placeholder="Comment pouvons-nous vous accompagner ?"></textarea>
@@ -92,7 +122,7 @@
         </div>
     </section>
 
-    <!-- Footer CYOS Heritage Adapté -->
+    <!-- Footer CYOS Heritage Adapté (Liens sous les droits d'auteur) -->
     <footer class="main-footer">
         <p>&copy; 2026 CYOS Heritage. Tous droits réservés.</p>
         
