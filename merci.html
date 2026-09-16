@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Envoyé | CYOS Heritage</title>
+    <!-- Liens vers les polices élégantes -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Styles spécifiques pour centrer le message de remerciement */
+        .thankyou-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .thankyou-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .thankyou-container h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .thankyou-container .subtitle {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #8e8e88;
+            margin-bottom: 30px;
+        }
+        .thankyou-container p {
+            font-size: 1.05rem;
+            color: #c4c4be;
+            margin-bottom: 40px;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        @media (max-width: 768px) {
+            .thankyou-container h1 { font-size: 2.2rem; }
+            .thankyou-container .subtitle { font-size: 0.95rem; }
+            .thankyou-container p { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu de Navigation (Identique sur toutes les pages) -->
+    <header class="main-header">
+        <div class="logo">
+            <a href="https://cyos.be">
+                <img src="assets/images/logo.png" alt="CYOS Heritage">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="produit.html">Le Coffret</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Section Principale de Remerciement -->
+    <section class="thankyou-section">
+        <div class="thankyou-container">
+            <h1>Merci</h1>
+            <p class="subtitle">Votre message a bien été transmis.</p>
+            <p>
+                Nous vous remercions pour votre confiance et l'intérêt que vous portez à CYOS Heritage. <br>
+                Nous prenons le temps de prendre connaissance de votre demande et nous vous répondrons avec toute la bienveillance et la discrétion requises dans les plus brefs délais.
+            </p>
+            <a href="index.html" class="btn">Retourner à l'accueil</a>
+        </div>
+    </section>
+
+    <!-- Footer CYOS Heritage Adapté (Liens sous les droits d'auteur) -->
+    <footer class="main-footer">
+        <p>&copy; 2026 CYOS Heritage. Tous droits réservés.</p>
+        
+        <div class="footer-links" style="margin-top: 15px; display: flex; justify-content: center; gap: 20px; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">
+            <a href="mentions-legales.html" style="color: #a0a09a; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#a0a09a'">Mentions Légales</a>
+            <span style="color: rgba(255, 255, 255, 0.15);">|</span>
+            <a href="cgv.html" style="color: #a0a09a; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#a0a09a'">CGV</a>
+            <span style="color: rgba(255, 255, 255, 0.15);">|</span>
+            <a href="politique-confidentialite.html" style="color: #a0a09a; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#a0a09a'">Confidentialité</a>
+            <span style="color: rgba(255, 255, 255, 0.15);">|</span>
+            <a href="contact.html" style="color: #a0a09a; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#a0a09a'">Contact</a>
+        </div>
+    </footer>
+    
+</body>
+</html>
