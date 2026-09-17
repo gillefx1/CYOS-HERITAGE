@@ -495,3 +495,228 @@ a {
     }
 }
 
+/* ==========================================================================
+   DESIGN DES 3 COLONNES DE COFFRETS (STRICTEMENT SYMÉTRIQUES ET ÉPURÉES)
+   ========================================================================== */
+.pricing-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #121212;
+    color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pricing-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.pricing-intro {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #c4c4be;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Grille flexible s'adaptant à tous les écrans */
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    align-items: stretch; /* Force toutes les cartes à faire exactement la même hauteur */
+    flex-wrap: wrap;
+}
+
+/* La carte de prix individuelle */
+.pricing-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 360px;
+    background-color: #1a1a19;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Optionnel : Légère bordure blanche pour mettre en avant l'offre Signature */
+.pricing-card.featured {
+    border-color: rgba(255, 255, 255, 0.2);
+    background-color: #1d1d1c;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.card-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.card-header .price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Pousse le texte pour remplir la boîte équitablement */
+}
+
+.card-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #c4c4be;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.card-intro-list {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.card-body ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.card-body ul li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #c4c4be;
+    font-weight: 300;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+/* Petit point blanc d'énumération chic avant chaque option */
+.card-body ul li::before {
+    content: "•";
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.card-extra-info {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #a0a09a;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.card-ideal {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #c4c4be;
+    font-weight: 300;
+    margin-top: auto; /* Aligne la note "Idéal pour" tout en bas de chaque carte */
+    padding-top: 20px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.05);
+}
+
+/* Pied de page de la section tarifs */
+.pricing-footer {
+    margin-top: 40px;
+}
+
+.pricing-footer p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #c4c4be;
+    max-width: 650px;
+    margin: 0 auto 20px auto;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.pricing-footer .footer-note {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666661;
+    margin-bottom: 15px;
+}
+
+.btn-contact-pricing {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    width: 260px;
+    padding: 14px 0;
+    background-color: #ffffff;
+    color: #121212;
+    border: 1px solid #ffffff;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-contact-pricing:hover {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   PROPRIÉTÉS STRICTES SMARTPHONE (CENTRAGE SUR IPHONE)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .pricing-section { padding: 50px 15px; }
+    .pricing-section h2 { font-size: 1.8rem; }
+    .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .pricing-card {
+        max-width: 100%;
+        width: 100%;
+    }
+    .btn-contact-pricing {
+        width: 100%;
+        max-width: 280px;
+    }
+}
