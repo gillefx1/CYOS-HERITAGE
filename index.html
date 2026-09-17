@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CYOS Heritage | Continue Your Own Story</title>
-    <!-- Liens vers les polices élégantes corrigés pour l'affichage de l'écosystème -->
+    <!-- Importation propre des polices élégantes -->
     <link href="https://googleapis.com" rel="stylesheet">
     <!-- Chemin modifié pour cibler le dossier assets/css/ -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -56,10 +56,76 @@
         }
 
         /* ==========================================================================
-           2. HARMONISATION DU FOOTER EN COMPACT (LOOK CLAIR NETTOYÉ)
+           2. CENTRAGE PARFAIT ET DESIGN DE LA SECTION CONCEPT & PILIERS
+           ========================================================================== */
+        .concept-section {
+            text-align: center;
+            padding: 60px 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .concept-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 300;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .grid-pillars {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        /* La Case Pilier : Force l'alignement central absolu de tous ses sous-éléments */
+        .pillar {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;    /* Centre horizontalement le logo, le h3 et le p */
+            justify-content: center;
+            text-align: center;     /* Centre toutes les lignes du texte */
+        }
+        /* Zone contenant le logo, centrée de manière autonome */
+        .pillar-icon {
+            height: 60px; /* Hauteur fixe pour aligner parfaitement les 3 icônes */
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .pillar-icon img {
+            height: 100%;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .pillar h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .pillar p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-weight: 300;
+            max-width: 100%;
+        }
+
+        /* ==========================================================================
+           3. HARMONISATION DU FOOTER EN COMPACT (LOOK CLAIR NETTOYÉ)
            ========================================================================== */
         .main-footer {
-            padding: 40px 20px !important; /* Force la hauteur réduite compacte */
+            padding: 40px 20px !important;
             background-color: #121212;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             text-align: center;
@@ -69,10 +135,10 @@
             font-size: 0.85rem;
             color: #666661;
             letter-spacing: 1px;
-            margin-bottom: 15px; /* Ajuste la séparation sous les droits d'auteur */
+            margin-bottom: 15px;
         }
         .footer-links {
-            margin-top: 0 !important; /* Nettoie la marge par défaut insérée en ligne */
+            margin-top: 0 !important;
             display: flex;
             justify-content: center;
             gap: 20px;
@@ -80,14 +146,13 @@
         }
 
         /* ==========================================================================
-           3. CONFIGURATION RESPONSIVE IPHONE & SMARTPHONE
+           4. CONFIGURATION RESPONSIVE IPHONE & SMARTPHONE
            ========================================================================== */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .hero .subtitle { font-size: 1rem; margin-bottom: 25px; }
             .hero .intro-text { font-size: 0.95rem; margin-bottom: 35px; }
             
-            /* Alignement en colonne parfaite et centré verticalement sur l'iPhone */
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -98,14 +163,22 @@
                 max-width: 280px;
                 margin: 0 auto;
             }
-            /* Adaptation de la liste du bas sur écran tactile */
+            .grid-pillars {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            .pillar {
+                max-width: 100%;
+                padding: 10px 0;
+            }
             .footer-links {
                 flex-direction: column;
                 align-items: center;
                 gap: 12px;
             }
             .footer-links span {
-                display: none; /* Efface les lignes séparatrices verticales superflues */
+                display: none;
             }
         }
     </style>
@@ -142,41 +215,40 @@
         </div>
     </section>
 
-    <!-- Section Le Concept (3 piliers) -->
-<section class="concept-section">
-    <h2>Une démarche sereine, un écrin précieux</h2>
-    <div class="grid-pillars">
-        
-        <!-- Pilier 1 : Vos Volontés -->
-        <div class="pillar">
-            <div class="pillar-icon">
-                <img src="assets/images/volontes.png" alt="Logo Vos Volontés">
+    <!-- Section Le Concept (3 piliers centrés avec logos) -->
+    <section class="concept-section">
+        <h2>Une démarche sereine, un écrin précieux</h2>
+        <div class="grid-pillars">
+            
+            <!-- Pilier 1 : Vos Volontés -->
+            <div class="pillar">
+                <div class="pillar-icon">
+                    <img src="assets/images/volontes.png" alt="Logo Vos Volontés">
+                </div>
+                <h3>Vos Volontés</h3>
+                <p>Organisez sereinement vos souhaits concernant vos funérailles et vos dernières volontés pour soulager vos proches le moment venu.</p>
             </div>
-            <h3>Vos Volontés</h3>
-            <p>Organisez sereinement vos souhaits concernant vos funérailles et vos dernières volontés pour soulager vos proches le moment venu.</p>
-        </div>
 
-        <!-- Pilier 2 : Vos Lettres -->
-        <div class="pillar">
-            <div class="pillar-icon">
-                <img src="assets/images/lettres.png" alt="Logo Vos Lettres">
+            <!-- Pilier 2 : Vos Lettres -->
+            <div class="pillar">
+                <div class="pillar-icon">
+                    <img src="assets/images/lettres.png" alt="Logo Vos Lettres">
+                </div>
+                <h3>Vos Lettres</h3>
+                <p>Prenez le temps d'écrire à ceux que vous aimez. Des mots intemporels, scellés, qui leur parviendront comme un héritage émotionnel unique.</p>
             </div>
-            <h3>Vos Lettres</h3>
-            <p>Prenez le temps d'écrire à ceux que vous aimez. Des mots intemporels, scellés, qui leur parviendront comme un héritage émotionnel unique.</p>
-        </div>
 
-        <!-- Pilier 3 : Le Coffret -->
-        <div class="pillar">
-            <div class="pillar-icon">
-                <img src="assets/images/coffret.png" alt="Logo Le Coffret">
+            <!-- Pilier 3 : Le Coffret -->
+            <div class="pillar">
+                <div class="pillar-icon">
+                    <img src="assets/images/coffret.png" alt="Logo Le Coffret">
+                </div>
+                <h3>Le Coffret</h3>
+                <p>Un objet physique haut de gamme et personnalisable, conçu pour abriter vos écrits en toute confidentialité au cœur de votre foyer.</p>
             </div>
-            <h3>Le Coffret</h3>
-            <p>Un objet physique haut de gamme et personnalisable, conçu pour abriter vos écrits en toute confidentialité au cœur de votre foyer.</p>
+
         </div>
-
-    </div>
-</section>
-
+    </section>
     
   <!-- Footer CYOS Heritage (Copie conforme visuelle de CYOS Event) -->
 <footer style="background-color: #121212; padding: 40px 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center; font-family: 'Montserrat', 'Helvetica Neue', sans-serif; width: 100%; box-sizing: border-box;">
@@ -209,10 +281,6 @@
 
     </div>
 </footer>
-
-
-
-
 
 </body>
 </html>
